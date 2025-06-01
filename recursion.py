@@ -12,8 +12,16 @@ def fac(number):
 132189  -->  1 + 3 + 2 + 1 + 8 + 9 = 24  -->  2 + 4 = 6
 493193  -->  4 + 9 + 3 + 1 + 9 + 3 = 29  -->  2 + 9 = 11  -->  1 + 1 = 2
 '''
+# example 1
 def digital_root(n):
     if n // 10 == 0:
         return n
     else:
         return digital_root(digital_root(n % 10) + digital_root(n // 10))
+    
+# example 2
+def digital_root(n):
+    if n < 10:
+        return n
+    else: 
+        return digital_root(sum(map(int, str(n))))
