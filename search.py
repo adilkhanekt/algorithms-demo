@@ -24,7 +24,7 @@ print(f"Execution time: {_linear_end - _linear_start} seconds")
 print("--------- Binary search ---------")
 
 low = 0
-high = 100
+high = len(lst)-1
 
 _bin_iter_count = 0
 
@@ -32,7 +32,7 @@ _bin_start = time.time()
 
 while low <= high:
     mid = (low + high) // 2
-    guess = lst[mid-1]
+    guess = lst[mid]
     _bin_iter_count += 1
     print("Iteration count:", _bin_iter_count)
     print(f"Low: {low}, High: {high}, MId: {mid}")
